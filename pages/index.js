@@ -1,10 +1,11 @@
 import React from 'react';
+import Search from '@components/Search'
 
 const index = () => {
   return (
-    <div>
-      hola mundo
-    </div>
+    <>
+    <Search/>
+    </>
   );
 };
 
