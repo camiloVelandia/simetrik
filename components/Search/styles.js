@@ -28,16 +28,20 @@ export const SearchInput = styled.input`
   border-top-left-radius:20px;
   border:none;
   padding:10px 20px;
-  outline:none
+  outline:none;
+  max-height:36px;
+  height:20px;
 `;
 export const Submit = styled.button`
+
   outline: none;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   border: none;
-  padding: 8px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   align-items: center;
     background-color: #c47ceb;
   & svg {
@@ -51,4 +55,22 @@ export const Submit = styled.button`
     transform:scale(.9)
   }
   }
+`;
+export const FilterBtn = styled.button`
+  outline: none;
+  background-color: #c47ceb;
+  border: none;
+  margin: 10px;
+  color:white;
+  cursor: pointer;
+  padding: 5px 10px;
+  &:active,
+  &:focus {
+    background-color: #8324b6;
+  }
+`;
+export const Span = styled.span`
+
+  color:white;
+  
 `;

@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {Container, Heading,  Form, SearchInput, Submit} from './styles'
+import {Container, Heading,  Form, SearchInput, Submit, FilterBtn, Span} from './styles'
 import { useDispatch } from "react-redux";
 
 const Search = () => {
   ///get input value
   const [keyword, setKeyword] = useState('')
+  const [filter, setFilter] = useState('text')
 
   /// redux hook for make dispatch
   const dispatch = useDispatch();
@@ -22,6 +23,11 @@ const Search = () => {
   const handleInputChange = (e) => {
     setKeyword(e.target.value);
   };
+  ////set Filter state function
+  const handleFilter = (value) => {
+    console.log(value)
+    setFilter(value);
+  };
 
 
   return (
@@ -32,7 +38,7 @@ const Search = () => {
       </Heading>
       <Form onSubmit={handleSubmit}>
         <SearchInput
-          type="text"
+          type={filter}
           name="search"
           id=""
           onChange={handleInputChange}
@@ -50,6 +56,12 @@ const Search = () => {
           </svg>
         </Submit>
       </Form>
+      <div>
+      <Span>Search by:</Span>
+        <FilterBtn onClick={() => handleFilter("text")}>text</FilterBtn>
+        <FilterBtn onClick={() => handleFilter("date")}> date</FilterBtn>
+        <FilterBtn onClick={() => handleFilter("number")}>number</FilterBtn>
+      </div>
     </Container>
   );
 };
