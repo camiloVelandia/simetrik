@@ -57,8 +57,6 @@ export default function reducer(state, action) {
         fuentesFiltered,
       };
     }
-
-
     default: {
       return state;
     }
