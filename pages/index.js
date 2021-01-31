@@ -5,7 +5,7 @@ import NotShow from '@components/NotShow'
 import {useSelector} from 'react-redux'
 
 
-const index = () => {
+const Home = () => {
 
   const state = useSelector((state)=> state)
   return (
@@ -40,4 +40,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

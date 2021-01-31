@@ -12,7 +12,7 @@
 
 ## Instalacion
 
-1. Clona el projecto: `git clone https://github.com/<your username>/SpaceX-Demo`
+1. Clona el projecto: `git clone https://github.com/<your username>/simetrik`
 2. Instala dependencias: `npm install` or use `npm i`
 3. Correr el projecto: `npm run dev`
 
